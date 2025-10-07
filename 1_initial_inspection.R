@@ -14,8 +14,13 @@ print(n = 11)
 
 persons_contracts %>%
   distinct(reason_end_contract) |>
-  print(n = 22)
+  print(n = 32)
 
 persons_contracts %>%
-  distinct(rank) 
+  distinct(rank) |>
+  print(n = 201)
+
+
+ranks|>
+  distinct(category)
   
