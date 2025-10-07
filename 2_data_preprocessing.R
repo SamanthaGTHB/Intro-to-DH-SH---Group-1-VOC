@@ -5,7 +5,9 @@ library(here)
 persons_contracts <- read_csv(here("data/voc_persons_contracts.csv"))
 ranks <-  read_csv(here("data/voc_ranks.csv"))
 
-persons_contracts <- persons_contracts |>
+# creating rank groups
+
+persons_contracts_processed <- persons_contracts |>
   mutate(
     rank_group = case_when(
       # Missing or unknown
@@ -37,6 +39,32 @@ persons_contracts <- persons_contracts |>
       TRUE ~ "OTHER"
     )
   )
-persons_contracts <- persons_contracts |>
-  relocate(rank_group, .before = 1)
+persons_contracts_processed <- persons_contracts_processed |>
+  relocate(rank_group, .before = 1) |>
+  janitor::clean_names()
+
+
+# minimizing levels for "reason_end_contract
+
+persons_contracts_processed <- persons_contracts_processed %>%
+  mutate(
+    reason_cat = forcats::fct_collapse(
+      reason_end_contract,
+      `Return/Remain`      = c("Repatriated", "Remains at the Cape"),
+      `Death/Perished`     = c("Deceased", "Murdered", "Shipwrecked", "Death penalty"),
+      `Missing/Deserted`   = c("Missing", "Absent upon departure", "Deserted"),
+      `Transfer/Separation`= c("Transferred","Resignation","Dismissal","Removed",
+                               "To a private ship","To a man of war","to regiment"),
+      `Health/Age`         = c("Unfit to work", "Age"),
+      `Disciplinary/Legal` = c("Penalised or punished", "In lening gaan"),
+      `Admin/Status`       = c("Zeeland chamber","Amsterdam chamber","Rotterdam chamber",
+                               "Enkhuizen chamber","Hoorn chamber","Delft chamber",
+                               "Free citizen","Woman"),
+      `Unknown/Other`      = c("Unknown","Not recorded","Otherwise","Last record")
+    )
+  )
+
+
+# writing in pre-processed data
+write_csv(persons_contracts_processed, here::here("data", "persons_contracts_processed.csv"))
 
