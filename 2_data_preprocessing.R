@@ -16,12 +16,12 @@ persons_contracts_processed <- persons_contracts |>
       # SEA: general seafarers and ship crew
       str_detect(rank, regex("sail|seaman|ship.?s boy|skipper|mate$|boatswain|helmsman|
                               water.?maker|quartermaster|steward|cook|cooper|carpenter|
-                              pilot|navigator|gunner|trumpeter|piper|block maker", ignore_case = TRUE)) ~ "SEA",
+                              pilot|navigator|gunner|trumpeter|piper|block maker|midshipman", ignore_case = TRUE)) ~ "SEA",
       
       # MILITARY: soldiers and officers
       str_detect(rank, regex("soldier|corporal|sergeant|bombardier|fusilier|
                               grenadier|artillery|cadet|officer|commander of the soldiers|
-                              colonel|major|captain.*military|cavalry", ignore_case = TRUE)) ~ "MILITARY",
+                              colonel|major|captain.*military|cavalry|recruit", ignore_case = TRUE)) ~ "MILITARY",
       
       # MEDICAL staff
       str_detect(rank, regex("surgeon|medical master|barber.?surgeon|midwife|
@@ -30,7 +30,8 @@ persons_contracts_processed <- persons_contracts |>
       # TRADE & administrative
       str_detect(rank, regex("merchant|assistant to.*merchant|bookkeeper|
                               clergyman|preacher|spiritual comforter|
-                              council of justice|lawyer|prosecutor", ignore_case = TRUE)) ~ "TRADE",
+                              council of justice|lawyer|prosecutor|maker|miller|
+                             locksmith|builder|craftsman|smith|cartwright|painter", ignore_case = TRUE)) ~ "TRADE",
       
       # SHIP officers (optional separate group)
       str_detect(rank, regex("captain.*sea|master$|lieutenant.*sea|officer cadet", ignore_case = TRUE)) ~ "SHIP",
@@ -61,9 +62,14 @@ persons_contracts_processed <- persons_contracts_processed %>%
                                "Enkhuizen chamber","Hoorn chamber","Delft chamber",
                                "Free citizen","Woman"),
       `Unknown/Other`      = c("Unknown","Not recorded","Otherwise","Last record")
-    )
+    ),
+    
+    died = if_else(
+      reason_end_contract %in% c("Deceased"),
+      1,    # 1 = died
+      0     # 0 = did not die
   )
-
+)
 
 # writing in pre-processed data
 write_csv(persons_contracts_processed, here::here("data", "persons_contracts_processed.csv"))
