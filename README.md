@@ -141,9 +141,15 @@ Our quantitative results complement qualitative historical accounts of the VOC, 
 
 # DOCUMENTATIONS AND SUSTAINABILITY
 
-All datasets and code are fully documented — the dataset, the enriched VOC-opvarenden database (Petram et al., 2024), is openly accessible via Zenodo. Metadata, including codebooks containing variable definitions, the “cleaning” procedures and data provenance are included.  
+All datasets and code used in this project are fully documented. The enriched VOC-opvarenden database (Petram et al., 2024) is openly accessible via Zenodo for reproduction and citation purposes (DOI: **10.5281/zenodo.10599528**). Metadata, including codebooks containing variable definitions, “cleaning” procedures, and data provenance are included.
 
-Our scripts used for data processing and analysis were written in R and are available on GitHub to ensure reproducibility and transparency. This project’s results are meant to be a starting point for more in-depth research concerning mortality risks and socio-economic status of VOC personnel.  
+Our data, literature review and scripts used for data processing, analysis and visualisation were written in R and are available on our public GitHub repository 
+(**https://github.com/SamanthaGTHB/Intro-to-DH-SH---Group-1-VOC**) to ensure reproducibility and transparency. The repository also contains our project report, outlining our research question, methodology and analytical decisions. The results of this project provide a foundation for more in-depth research into mortality risks and socio-economic hierarchies among VOC personnel.
+
+**Sustainability**  
+Regarding sustainability, we aimed to make our research as open and reusable as possible. GitHub provides version control, so data and scripts are recoverable, and code in R can be reproduced from this repository. The permanent Zenodo DOI ensures the long-term preservation and citability of the dataset. These platforms safeguard transparency and sustain our research outcomes.
+
+ 
 
 # REFLECTION
 
