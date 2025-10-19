@@ -56,7 +56,7 @@ In this section, we explain how we approached task division in our project. Each
 
 
 **Justification for Chosen Methodologies:**  
-To collect, pre-process and analyze our datasets, we chose to utilize the R coding language because multiple group members were most familiar and comfortable working with data via R. Similarly, we chose to use Github for sharing due to team member’s familiarity with that platform.
+To collect, pre-process and analyze our datasets, we chose to utilize the R coding language because multiple group members were most familiar and comfortable working with data via R. Similarly, we chose to use Github for sharing due to team familiarity with that platform.
 
 # WORKFLOW STEPS
 
