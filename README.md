@@ -44,44 +44,16 @@ To address our research question, we preprocessed the “voc_persons_contract”
 # METHODOLOGY
 
 **Task Division:**  
-In this section, we explain how we approached task division in our project. Each team member focused on tasks that aligned with their strengths and background, but most parts of the process (especially decision-making, literature research, and the presentation) were done collaboratively to keep the project consistent and coherent throughout. An overview of the work packages and how they were divided is presented below.
+In this section, we explain how we approached task division in our project. Each team member focused on tasks that aligned with their strengths and background, but most parts of the process (especially decision-making, literature research, and the presentation) were done collaboratively to keep the project consistent and coherent throughout. An overview of the work packages and how they were divided is presented below.  
 
-**Research Framing:**  
-* Goal: Finalize research framing  
-* Lead: Lisanne  
-* Support: Samantha and Sierra  
-* Tasks:  
-  * Conduct literary research on the VOC  
-  * Formulate the research question and thesis statement  
+| Work Package | Goal | Lead | Support | Tasks |
+|--------------|------|------|---------|-------|
+| **Research Framing** | Finalize research framing | Lisanne | Samantha and Sierra | - Conduct literary research on the VOC<br>- Formulate the research question and thesis statement |
+| **Data Collection & Preprocessing** | Prepare dataset for analysis | Sierra |  | - Preprocess the data using R |
+| **Data Analysis & Visualization** | Provide analytical insights and visualizations | Sierra | Samantha | - Conduct data analysis in R<br>- Generate visualizations to support findings |
+| **Literature & Contextual Interpretation** | Interpret results in context of existing literature | Samantha | Lisanne | - Connect quantitative findings to historical context |
+| **Presentation** | Final group presentation | All three (Sierra, Samantha, Lisanne) |  | - Write text that provides an overview of the project for the presentation<br>- Build slides and visual assets<br>- Present in class |
 
-**Data Collection & Preprocessing:**  
-* Goal: Prepare dataset for analysis  
-* Lead: Sierra  
-* Tasks:  
-  * Preprocess the data using R  
-
-**Data Analysis & Visualization:**  
-* Goal: Provide analytical insights and visualizations  
-* Lead: Sierra  
-* Support: Samantha  
-* Tasks:  
-  * Conduct data analysis in R  
-  * Generate visualizations to support findings  
-
-**Literature & Contextual Interpretation:**  
-* Goal: Interpret results in context of existing literature  
-* Lead: Samantha  
-* Support: Lisanne  
-* Tasks:  
-  * Connect quantitative findings to historical context  
-
-**Presentation:**  
-* Goal: Final group presentation  
-* Co-leads: All three (Sierra, Samantha, Lisanne)  
-* Tasks:  
-  * Write text that provides an overview of the project for the presentation  
-  * Build slides and visual assets  
-  * Present in class  
 
 **Justification for Chosen Methodologies:**  
 To collect, pre-process and analyze our datasets, we chose to utilize the R coding language because multiple group members were most familiar and comfortable working with data via R. Similarly, we chose to use Github for sharing due to team member’s familiarity with that platform.
